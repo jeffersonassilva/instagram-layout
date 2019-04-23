@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.white,
         height: metrics.headerHeight,
         paddingTop: metrics.headerPadding,
-        paddingHorizontal: metrics.padding,
+        paddingHorizontal: metrics.mediumPadding,
         borderBottomWidth: 1,
         borderColor: colors.lighter,
         flexDirection: 'row',
