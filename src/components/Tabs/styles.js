@@ -33,6 +33,12 @@ const styles = StyleSheet.create({
     mainIcon: {
         color: colors.white,
     },
+
+    avatar: {
+        width: 24,
+        height: 24,
+        borderRadius: 12,
+    }
 });
 
 export default styles;

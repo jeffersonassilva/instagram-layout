@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Image, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import IconFeather from 'react-native-vector-icons/Feather';
 import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -11,7 +11,10 @@ const Tabs = () => (
         <Icon name="ios-search" style={styles.icon}/>
         <IconFeather name="plus-square" style={styles.icon}/>
         <Icon name="ios-heart-empty" style={styles.icon}/>
-        <Icon name="ios-contact" style={styles.icon}/>
+        <Image
+            style={styles.avatar}
+            source={require('../../images/jeffersonassilva.jpg')}
+        />
     </View>
 );
 
