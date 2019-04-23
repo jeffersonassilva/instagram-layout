@@ -3,7 +3,10 @@ import {Dimensions, Platform} from 'react-native';
 const {width, height} = Dimensions.get('window');
 
 export default {
-    padding: 15,
+    smallPadding: 5,
+    basePadding: 10,
+    mediumPadding: 15,
+    doubleBasePadding: 20,
     smallMargin: 5,
     baseMargin: 10,
     mediumMargin: 15,
