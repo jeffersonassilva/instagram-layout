@@ -5,13 +5,13 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
         alignItems: 'center',
-        width: 75,
+        width: 80,
     },
 
     outter: {
-        width: 55,
-        height: 55,
-        borderRadius: 55 / 2,
+        width: 59,
+        height: 59,
+        borderRadius: 59 / 2,
         backgroundColor: colors.lighter,
         alignItems: 'center',
         justifyContent: 'center',
@@ -22,18 +22,18 @@ const styles = StyleSheet.create({
     },
 
     inner: {
-        width: 52,
-        height: 52,
-        borderRadius: 52 / 2,
+        width: 56,
+        height: 56,
+        borderRadius: 56 / 2,
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
     },
 
     avatar: {
-        width: 46,
-        height: 46,
-        borderRadius: 46 / 2,
+        width: 50,
+        height: 50,
+        borderRadius: 50 / 2,
     },
 
     name: {
