@@ -15,7 +15,7 @@ export default {
     screenHeight: width < height ? height : width,
     baseRadius: 3,
     ...Platform.select({
-        ios: {headerHeight: 64, headerPadding: 20},
+        ios: {headerHeight: 44, headerPadding: 20},
         android: {headerHeight: 44, headerPadding: 0},
     }),
     tabBarHeight: 50,
