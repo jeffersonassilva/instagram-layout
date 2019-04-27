@@ -53,20 +53,25 @@ const styles = StyleSheet.create({
 
     actions: {
         flexDirection: 'row',
-        padding: metrics.basePadding,
-        justifyContent: 'space-between',
+        paddingTop: metrics.basePadding,
+        paddingBottom: metrics.basePadding,
+        paddingLeft: metrics.smallPadding,
+        paddingRight: metrics.basePadding,
+        justifyContent: 'flex-start',
     },
 
     icon: {
-        fontSize: fonts.bigger,
+        paddingRight: metrics.basePadding,
+        fontSize: 28,
     },
 
     plane: {
-        fontSize: 18,
+        fontSize: 21,
+        flex: 1,
     },
 
     bookmark: {
-        fontSize: 19,
+        fontSize: 23,
     },
 
     likes: {
