@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import IconFeather from 'react-native-vector-icons/Feather';
 import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './styles';
+import images from './../../config/images';
 import {withNavigation} from 'react-navigation';
 
 class Tabs extends Component {
@@ -24,7 +25,7 @@ class Tabs extends Component {
                 }}>
                     <Image
                         style={styles.avatar}
-                        source={require('../../images/jeffersonassilva.jpg')}
+                        source={images.me}
                     />
                 </TouchableOpacity>
             </View>

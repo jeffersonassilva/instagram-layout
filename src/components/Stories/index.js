@@ -3,6 +3,7 @@ import {Image, Text, View, ScrollView} from 'react-native';
 import User from '../User';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/AntDesign';
+import images from './../../config/images';
 
 export default class Stories extends Component {
     state = {
@@ -45,7 +46,7 @@ export default class Stories extends Component {
                         <View style={styles.inner}>
                             <Image
                                 style={styles.avatar}
-                                source={require('../../images/jeffersonassilva.jpg')}
+                                source={images.me}
                             />
                         </View>
                     </View>
