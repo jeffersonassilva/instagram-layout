@@ -4,7 +4,10 @@ import {fonts, colors, metrics} from '../../styles';
 const styles = StyleSheet.create({
     container: {
         backgroundColor: colors.white,
-        padding: metrics.basePadding,
+        paddingLeft: metrics.smallPadding,
+        paddingRight: metrics.smallPadding,
+        paddingTop: metrics.basePadding,
+        paddingBottom: metrics.basePadding,
         borderBottomWidth: 1,
         borderColor: colors.lighter,
     },
@@ -12,30 +15,30 @@ const styles = StyleSheet.create({
     myStory: {
         alignItems: 'center',
         justifyContent: 'center',
-        width: 75,
+        width: 80,
     },
 
     outter: {
-        width: 55,
-        height: 55,
-        borderRadius: 55 / 2,
+        width: 59,
+        height: 59,
+        borderRadius: 59 / 2,
         alignItems: 'center',
         justifyContent: 'center',
     },
 
     inner: {
-        width: 52,
-        height: 52,
-        borderRadius: 52 / 2,
+        width: 56,
+        height: 56,
+        borderRadius: 56 / 2,
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
     },
 
     avatar: {
-        width: 46,
-        height: 46,
-        borderRadius: 46 / 2,
+        width: 50,
+        height: 50,
+        borderRadius: 50 / 2,
     },
 
     name: {
