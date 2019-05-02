@@ -2,7 +2,26 @@ import {Dimensions, Platform} from 'react-native';
 
 const {width, height} = Dimensions.get('window');
 
-export default {
+const colors = {
+    primary: '#444',
+    darker: '#111',
+    dark: '#333',
+    regular: '#666',
+    light: '#C0C0C0',
+    lighter: '#eee',
+    white: '#FFF',
+    transparent: 'rgba(0, 0, 0, 0)',
+};
+
+const fonts = {
+    bigger: 24,
+    big: 16,
+    regular: 14,
+    small: 12,
+    smaller: 11,
+};
+
+const metrics = {
     smallPadding: 5,
     basePadding: 10,
     mediumPadding: 15,
@@ -20,3 +39,5 @@ export default {
     }),
     tabBarHeight: 50,
 };
+
+export {colors, fonts, metrics};
