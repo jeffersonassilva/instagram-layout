@@ -1,8 +1,9 @@
 import {StyleSheet} from 'react-native';
-import {metrics, colors} from '../../styles';
+import {metrics, colors} from '../../config/styles';
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         backgroundColor: colors.white,
         height: metrics.headerHeight,
         paddingHorizontal: metrics.mediumPadding,
