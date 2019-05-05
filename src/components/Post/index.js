@@ -10,16 +10,11 @@ import {withNavigation} from 'react-navigation';
 
 class Post extends Component {
 
-    constructor(props) {
-        super(props);
-        post = this.props.post;
+    _navigateTo(pageName, params) {
+        this.props.navigation.navigate(pageName, params);
     }
 
-    _navigateTo(pageName) {
-        this.props.navigation.navigate(pageName)
-    }
-
-    setLocalization(localization) {
+    _setLocalization(localization) {
         return <Text style={styles.localization}>{localization}</Text>
     };
 
@@ -29,36 +24,36 @@ class Post extends Component {
                 <View style={styles.info}>
                     <Image
                         style={styles.profile}
-                        source={post.profile}
+                        source={this.props.post.profile}
                     />
                     <View style={styles.texts}>
                         <TouchableOpacity onPress={() => {
-                            this._navigateTo('Teste')
+                            this._navigateTo('Profile', {name: this.props.post.name})
                         }}>
-                            <Text style={styles.name}>{post.name}</Text>
+                            <Text style={styles.name}>{this.props.post.name}</Text>
                         </TouchableOpacity>
-                        {post.localization ? this.setLocalization(post.localization) : null}
+                        {this.props.post.localization ? this._setLocalization(this.props.post.localization) : null}
                     </View>
                     <Icon name="ellipsis1" style={styles.ellipsis}/>
                 </View>
-                {post.multipleImages ?
+                {this.props.post.multipleImages ?
                     <ScrollView horizontal={true}>
                         <Ionicons name="ios-arrow-dropleft-circle" style={styles.before}/>
                         <Ionicons name="ios-arrow-dropright-circle" style={styles.after}/>
                         <Image
                             style={styles.photos}
-                            source={post.images[0].image}
+                            source={this.props.post.images[0].image}
                         />
                         <Image
                             style={styles.photos}
-                            source={post.images[1].image}
+                            source={this.props.post.images[1].image}
                         />
                     </ScrollView>
                     :
                     <View>
                         <Image
                             style={styles.photo}
-                            source={post.image}
+                            source={this.props.post.image}
                         />
                     </View>
                 }
@@ -69,18 +64,18 @@ class Post extends Component {
                     <IconFontAwesome name="bookmark-o" style={styles.bookmark}/>
                 </View>
                 <Text style={styles.likes}>
-                    {post.likes} curtidas
+                    {this.props.post.likes} curtidas
                 </Text>
                 <View style={styles.comments}>
                     <Text style={styles.commentUser}>
-                        {post.name}
+                        {this.props.post.name}
                     </Text>
                     <Text style={styles.commentDesc}>
-                        {post.description}
+                        {this.props.post.description}
                     </Text>
                 </View>
                 <View style={styles.details}>
-                    <Text style={styles.time}>{post.time}</Text>
+                    <Text style={styles.time}>{this.props.post.time}</Text>
                 </View>
             </View>
         );

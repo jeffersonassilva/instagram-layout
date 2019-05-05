@@ -3,11 +3,12 @@ import Header from "../../components/Header";
 import {SafeAreaView, ScrollView, View} from "react-native";
 import Stories from "../../components/Stories";
 import Timeline from "../../components/Timeline";
-import Tabs from "../../components/Tabs";
 
 class HomeScreen extends Component {
     static navigationOptions = {
-        headerTitle: <Header/>
+        headerTitle: <Header/>,
+        headerBackTitle: null,
+        animationEnabled: false,
     };
 
     render() {
@@ -18,7 +19,6 @@ class HomeScreen extends Component {
                         <Stories/>
                         <Timeline/>
                     </ScrollView>
-                    <Tabs/>
                 </View>
             </SafeAreaView>
         );

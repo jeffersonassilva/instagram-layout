@@ -62,16 +62,17 @@ const styles = StyleSheet.create({
 
     icon: {
         paddingRight: metrics.basePadding,
-        fontSize: 28,
+        fontSize: 32,
     },
 
     plane: {
-        fontSize: 21,
+        paddingLeft: metrics.smallPadding,
+        fontSize: 23,
         flex: 1,
     },
 
     bookmark: {
-        fontSize: 23,
+        fontSize: 27,
     },
 
     likes: {
