@@ -10,18 +10,29 @@ import {withNavigation} from 'react-navigation';
 class Tabs extends Component {
 
     _navigateTo(pageName) {
-        this.props.navigation.navigate(pageName)
+        this.props.navigation.navigate(pageName);
     }
 
     render() {
         return (
             <View style={styles.container}>
-                <IconMaterial name="home-variant" style={[styles.icon, styles.active]}/>
-                <Icon name="ios-search" style={styles.icon}/>
+                <TouchableOpacity onPress={() => {
+                    this._navigateTo('Home')
+                }}>
+                    <IconMaterial name="home-variant" style={[styles.icon, styles.active]}/>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={() => {
+                    this._navigateTo('Search')
+                }}>
+                    <Icon name="ios-search" style={styles.icon}/>
+                </TouchableOpacity>
+
                 <IconFeather name="plus-square" style={styles.icon}/>
                 <Icon name="ios-heart-empty" style={styles.icon}/>
+
                 <TouchableOpacity onPress={() => {
-                    this._navigateTo('Teste')
+                    //this._navigateTo('Teste')
                 }}>
                     <Image
                         style={styles.avatar}
