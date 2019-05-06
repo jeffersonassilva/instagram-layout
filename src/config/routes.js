@@ -7,17 +7,12 @@ import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from "react-native-vector-icons/Ionicons";
 import IconFeather from "react-native-vector-icons/Feather";
 import IconFontAwesome5 from "react-native-vector-icons/FontAwesome5";
-import HomeScreen from "../screens/Home";
-import ProfileScreen from "../screens/Profile";
-import SearchScreen from "../screens/Search";
-import CameraScreen from "../screens/Camera";
-import ActivitiesScreen from "../screens/Activities";
-import MeScreen from "../screens/Me";
+import {Activities, Camera, Home, Me, Search, Profile} from './screens';
 
 const AppNavigator = createStackNavigator(
     {
-        Home: HomeScreen,
-        Profile: ProfileScreen,
+        Home: Home,
+        Profile: Profile,
     }
 );
 
@@ -35,7 +30,7 @@ const TabNavigator = createBottomTabNavigator(
             },
         },
         Search: {
-            screen: SearchScreen,
+            screen: Search,
             navigationOptions: {
                 tabBarIcon: ({focused}) => {
                     return (
@@ -46,7 +41,7 @@ const TabNavigator = createBottomTabNavigator(
             },
         },
         Camera: {
-            screen: CameraScreen,
+            screen: Camera,
             navigationOptions: {
                 tabBarIcon: (
                     <IconFeather name="plus-square" style={{fontSize: 26}}/>
@@ -54,7 +49,7 @@ const TabNavigator = createBottomTabNavigator(
             },
         },
         Activities: {
-            screen: ActivitiesScreen,
+            screen: Activities,
             navigationOptions: {
                 tabBarIcon: ({focused}) => {
                     return (
@@ -65,7 +60,7 @@ const TabNavigator = createBottomTabNavigator(
             },
         },
         Me: {
-            screen: MeScreen,
+            screen: Me,
             navigationOptions: {
                 tabBarIcon: ({focused}) => {
                     return (
