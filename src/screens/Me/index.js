@@ -6,6 +6,7 @@ import IconMaterial from "react-native-vector-icons/MaterialCommunityIcons";
 import IconAnt from 'react-native-vector-icons/AntDesign';
 import IconEvil from 'react-native-vector-icons/EvilIcons';
 import images from "../../config/images";
+import PhotoList from "../../components/PhotosList";
 
 class MeScreen extends Component {
     render() {
@@ -62,6 +63,7 @@ class MeScreen extends Component {
                         <IconAnt name="laptop" size={22} style={styles.icon}/>
                         <IconEvil name="user" size={30} style={styles.icon}/>
                     </View>
+                    <PhotoList />
                 </ScrollView>
             </SafeAreaView>
         );
