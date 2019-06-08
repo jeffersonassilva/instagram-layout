@@ -1,13 +1,48 @@
-import {createStackNavigator, createBottomTabNavigator} from "react-navigation";
+import {createStackNavigator, createBottomTabNavigator, createMaterialTopTabNavigator} from "react-navigation";
 import React from 'react';
 import {Image, StyleSheet, View} from "react-native";
 import images from "./images";
-import {colors} from "./styles";
+import {colors, fonts, metrics} from "./styles";
 import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from "react-native-vector-icons/Ionicons";
 import IconFeather from "react-native-vector-icons/Feather";
 import IconFontAwesome5 from "react-native-vector-icons/FontAwesome5";
-import {Activities, Camera, Home, Me, Search, Profile} from './screens';
+import {Camera, Home, Me, Search, Profile, ActivitiesMe, ActivitiesFollowing} from './screens';
+
+const ActivitiesTabs = createMaterialTopTabNavigator({
+    Tab1: {
+        screen: ActivitiesFollowing,
+        navigationOptions: {
+            title: 'Seguindo',
+        }
+    },
+    Tab2: {
+        screen: ActivitiesMe,
+        navigationOptions: {
+            title: 'Você',
+        }
+    },
+}, {
+    tabBarOptions: {
+        scrollEnabled: true,
+        upperCaseLabel: false,
+        activeTintColor: '#333',
+        inactiveTintColor: colors.light,
+        labelStyle: {
+            fontSize: fonts.big,
+        },
+        tabStyle: {
+            paddingTop: 40,
+            width: metrics.screenWidth / 2,
+        },
+        style: {
+            backgroundColor: colors.white,
+        },
+        indicatorStyle: {
+            backgroundColor: '#333',
+        }
+    },
+});
 
 const AppNavigator = createStackNavigator(
     {
@@ -49,7 +84,7 @@ const TabNavigator = createBottomTabNavigator(
             },
         },
         Activities: {
-            screen: Activities,
+            screen: ActivitiesTabs,
             navigationOptions: {
                 tabBarIcon: ({focused}) => {
                     return (
