@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 import {SafeAreaView, Text, View} from "react-native";
 import styles from "./styles";
 
-class ActivitiesScreen extends Component {
+class ActivitiesFollowingScreen extends Component {
     render() {
         return (
             <SafeAreaView style={{flex: 1}}>
                 <View style={styles.container}>
                     <View style={styles.search}>
-                        <Text>Activities</Text>
+                        <Text>Following</Text>
                     </View>
                 </View>
             </SafeAreaView>
@@ -16,4 +16,4 @@ class ActivitiesScreen extends Component {
     }
 }
 
-export default ActivitiesScreen;
+export default ActivitiesFollowingScreen;
