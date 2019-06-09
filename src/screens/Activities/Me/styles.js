@@ -49,14 +49,11 @@ const styles = StyleSheet.create({
     },
 
     action: {
-        flex: 2,
         justifyContent: 'center',
         alignItems: 'center',
     },
 
     touchable: {
-        justifyContent: 'center',
-        alignItems: 'center',
         borderRadius: 5,
         backgroundColor: '#69a1ea',
         paddingLeft: metrics.doubleBasePadding,
@@ -66,8 +63,6 @@ const styles = StyleSheet.create({
     },
 
     touchableFollowing: {
-        justifyContent: 'center',
-        alignItems: 'center',
         borderWidth: 0.5,
         borderColor: '#ccc',
         borderRadius: 5,
